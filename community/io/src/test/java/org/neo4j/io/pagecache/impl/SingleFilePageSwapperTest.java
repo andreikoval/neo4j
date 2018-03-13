@@ -306,7 +306,7 @@ public class SingleFilePageSwapperTest extends PageSwapperTest
                 ProcessUtil.getJavaExecutable().toString(),
                 "-cp", ProcessUtil.getClassPath(),
                 LockThisFileProgram.class.getCanonicalName(), file.getAbsolutePath() );
-        File wd = new File( "target/test-classes" ).getAbsoluteFile();
+        File wd = new File( "build/classes/java/test" ).getAbsoluteFile();
         pb.directory( wd );
         Process process = pb.start();
         BufferedReader reader = new BufferedReader( new InputStreamReader( process.getInputStream() ) );
